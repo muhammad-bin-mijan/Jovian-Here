@@ -11,10 +11,12 @@ tasks = [
 
 @app.route("/")
 def home():
-    return jsonify({
-        "message": "Welcome to your first backend project!",
-        "try": ["GET /api/tasks", "POST /api/tasks", "GET /api/tasks/<id>"],
-    })
+    return jsonify(
+        {
+            "message": "Welcome to your first backend project!",
+            "try": ["GET /api/tasks", "POST /api/tasks", "GET /api/tasks/<id>"],
+        }
+    )
 
 
 @app.route("/api/tasks", methods=["GET"])
